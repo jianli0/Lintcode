@@ -1,11 +1,16 @@
 class Solution:
     def strStr(self, source, target):
-        if target == "":
-            return 0
+        if target == None or source == None:
+            return -1
         else:
-            if not source:
-                return -1
-            elif not target:
+            if source == "":
+                if target == "":
+                    return 0
+                else:
+                    return -1
+            if target == "":
+                return 0
+            else:
                 for i in range(len(source)):
                     if source[i] == target[0]:
                         if source[i:i + len(target)] == target:
