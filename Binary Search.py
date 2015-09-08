@@ -16,7 +16,6 @@ class Solution:
                 start = mid
             else:
                 end = mid
-
         if nums[start] == target:
             return start
         if nums[end] == target:
