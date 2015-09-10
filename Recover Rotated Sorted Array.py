@@ -35,10 +35,8 @@ if __name__ == '__main__':
     nums2 = None
     nums3 = [4, 5, 1, 2, 3]
     nums4 = [1, 2, 3, 4, 5]
-    nums5 = [5, 4, 3, 2, 1]
 
     print a.recoverRotatedSortedArray(nums1)
     print a.recoverRotatedSortedArray(nums2)
     print a.recoverRotatedSortedArray(nums3)
     print a.recoverRotatedSortedArray(nums4)
-    print a.recoverRotatedSortedArray(nums5)
