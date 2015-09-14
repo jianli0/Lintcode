@@ -1,8 +1,8 @@
-# Divide & Conquer
-
+# Recursion
 """
 Definition of TreeNode:
 """
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
@@ -15,23 +15,23 @@ class Solution:
     @return: Preorder in ArrayList which contains node values.
     """
     def preorderTraversal(self, root):
-        # leaf or None
-        result = []
+        preorder = []
+        stack = []
+
         if root == None:
-            return result
+            return preorder
 
-        # Divide
-        left = self.preorderTraversal(root.left)
-        right = self.preorderTraversal(root.right)
+        stack.append(root)
 
-        # Conquer
-        result.append(root.val)
-        result = result + left
-        result = result + right
+        while len(stack):
+            node = stack.pop()
+            preorder.append(node.val)
+            if node.right != None:
+                stack.append(node.right)
+            if node.left != None:
+                stack.append(node.left)
 
-        return result
-
-
+        return preorder
 
 if __name__ == '__main__':
     a = Solution()
@@ -58,6 +58,6 @@ if __name__ == '__main__':
     aa3.left = aa4
     aa3.right = aa5
 
-    # print a.preorderTraversal(a1)
-    # print a.preorderTraversal(None)
+    print a.preorderTraversal(a1)
+    print a.preorderTraversal(None)
     print a.preorderTraversal(aa1)
