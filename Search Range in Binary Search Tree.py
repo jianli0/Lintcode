@@ -14,7 +14,10 @@ class Solution:
     @return: Return all keys that k1<=key<=k2 in ascending order.
     """
     def searchRange(self, root, k1, k2):
-        return self.searchRangeHelper(root, k1, k2, []).sort()
+        a = self.searchRangeHelper(root, k1, k2, [])
+        a.sort()
+        return a
+
 
 
     def searchRangeHelper(self, root, k1, k2, result):
@@ -23,6 +26,7 @@ class Solution:
         print "result is now %r" %result
 
         if root == None:
+            print "return before"
             return result
 
         if root.val < k1:
@@ -33,6 +37,9 @@ class Solution:
             result.append(root.val)
             self.searchRangeHelper(root.left, k1, k2, result)
             self.searchRangeHelper(root.right, k1, k2, result)
+
+        # Debug
+        print "return later"
 
         return result
 
