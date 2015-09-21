@@ -18,8 +18,6 @@ class Solution:
         a.sort()
         return a
 
-
-
     def searchRangeHelper(self, root, k1, k2, result):
 
         # Debug
