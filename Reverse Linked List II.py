@@ -34,15 +34,7 @@ class Solution:
         num = 1
         rvsRange = n - m
         curt = None
-
-
-
-
             num += 1
-
-
-
-
 
 if __name__ == '__main__':
     b6 = ListNode(2)
@@ -60,3 +52,4 @@ if __name__ == '__main__':
         print start.val
         start = start.next
 
+if __name__ == '__main__':
